@@ -7,13 +7,19 @@ class BasicDesignScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: const [
+        children: [
           //Image
-          Image(image: AssetImage('assets/landscape.jpg')),
+          const Image(image: AssetImage('assets/landscape.jpg')),
           //Title
-          Title(),
+          const Title(),
           //Botton Section
-          BottonSection()
+          const BottonSection(),
+          //Description
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+            child: const Text(
+                'Enim temptor est nisi eiusmod tempor velit minim consectetur reprehenderit labore culpa aute ex. Ullamco veniam anim mollit consequat qui eiusmod occaecat mollit anim. Mollit officia magna Lorem pariatur exercitation officia ame.'),
+          ),
         ],
       ),
     );
