@@ -11,7 +11,9 @@ class BasicDesignScreen extends StatelessWidget {
           //Image
           Image(image: AssetImage('assets/landscape.jpg')),
           //Title
-          Title()
+          Title(),
+          //Botton Section
+          BottonSection()
         ],
       ),
     );
@@ -45,6 +47,50 @@ class Title extends StatelessWidget {
           const Text('41'),
         ],
       ),
+    );
+  }
+}
+
+class BottonSection extends StatelessWidget {
+  const BottonSection({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: const [
+        CustomButton(icon: Icons.call, text: 'Call'),
+        CustomButton(icon: Icons.near_me, text: 'Route'),
+        CustomButton(icon: Icons.share, text: 'Share'),
+      ],
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  final IconData icon;
+  final String text;
+
+  const CustomButton({
+    Key? key,
+    required this.icon,
+    required this.text,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    const color = Colors.blue;
+
+    return Column(
+      children: [
+        IconButton(
+          onPressed: () {},
+          icon: Icon(icon, color: color),
+        ),
+        Text(text, style: const TextStyle(color: color))
+      ],
     );
   }
 }
