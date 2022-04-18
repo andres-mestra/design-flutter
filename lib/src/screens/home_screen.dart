@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:desing/src/widgets/background.dart';
 import 'package:desing/src/widgets/page_title.dart';
 import 'package:desing/src/widgets/custom_navigation.dart';
+import 'package:desing/src/widgets/card_table.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -31,7 +32,9 @@ class _HomeBody extends StatelessWidget {
       child: Column(
         children: const [
           //Titles
-          PageTitle()
+          PageTitle(),
+          //Card Table
+          CardTable(),
         ],
       ),
     );
