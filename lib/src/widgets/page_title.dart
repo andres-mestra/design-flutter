@@ -10,7 +10,7 @@ class PageTitle extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             Text(
               'Classify transaction',
