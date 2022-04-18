@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:desing/src/widgets/background.dart';
 import 'package:desing/src/widgets/page_title.dart';
+import 'package:desing/src/widgets/custom_navigation.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -9,12 +10,12 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        children: [
-          //Background
+        children: const [
           Background(),
-          _HomeBody()
+          _HomeBody(),
         ],
       ),
+      bottomNavigationBar: const CustomNavigation(),
     );
   }
 }
@@ -28,7 +29,7 @@ class _HomeBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        children: [
+        children: const [
           //Titles
           PageTitle()
         ],
